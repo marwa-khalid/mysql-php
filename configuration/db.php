@@ -8,7 +8,6 @@ $database = "Products";
 
 // Create a connection
 $connection = mysqli_connect($server_name, $username, $password, $database);
-$db_config = mysqli_select_db($connection,$database);
 
 // Die if connection was not successful
 if (!$connection){

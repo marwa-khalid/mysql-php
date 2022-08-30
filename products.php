@@ -5,7 +5,7 @@
         
         <title>Shopping Site</title>
         
-        <link rel="stylesheet" href="Products.css">
+        <link rel="stylesheet" href="products.css">
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -23,7 +23,7 @@
             <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top bg-dark">
 
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="Products.php"><img src="images/logo.PNG" alt=""></a>
+                    <a class="navbar-brand" href="products.php"><img src="images/logo.PNG" alt=""></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myMenu"><span class="navbar-toggler-icon"></span></button>
 
                     <div class="collapse navbar-collapse" id="myMenu">
@@ -56,7 +56,7 @@
 
                 <div class="col-sm-3 shadow m-4" >
                     <div class="card-body">
-                        <img src="images\cutetop.png" class="image w-100"/>
+                        <img src="images/<?php echo $row['ProductImage'] ?>" class="image w-100"/>
                         <div class="card-details text-center">
                             <h5 class="name" > <?php echo $row['ProductName'] ?> </h5>
                             <span class="price" > <?php echo $row['ProductPrice'] ?> </span>
