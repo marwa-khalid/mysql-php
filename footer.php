@@ -11,7 +11,7 @@
                         <a target="_blank" href="https://www.linkedin.com/in/marwa-khalid-887804198/"><i class="fa fa-linkedin"></i></a>
                     </div>
                 </div>
-            </div>
+</div>
 
             <div class="footerbottom">
                 <p>&copy;2022 All rights reserved</p>
