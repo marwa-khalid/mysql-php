@@ -5,7 +5,7 @@
         
         <title>Shopping Site</title>
         
-        <link rel="stylesheet" href="products.css">
+        <link rel="stylesheet" href="Products.css">
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -23,7 +23,7 @@
             <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top bg-dark">
 
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="products.php"><img src="images/logo.PNG" alt=""></a>
+                    <a class="navbar-brand" href="Products.php"><img src="images/logo.PNG" alt=""></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myMenu"><span class="navbar-toggler-icon"></span></button>
 
                     <div class="collapse navbar-collapse" id="myMenu">
@@ -44,7 +44,7 @@
             <div class="row mr-4 ml-4 mb-4">
 
             <?php
-                require 'config/db.php';
+                require 'configuration/db.php';
 
                 $query = "SELECT * FROM Product";
                 $query_run = mysqli_query($connection, $query);
