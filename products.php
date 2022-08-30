@@ -11,6 +11,11 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
@@ -40,8 +45,18 @@
                 </div>
 
             </nav>
+
+            <div class="row">
+
+                <button 
+                    data-toggle="modal" 
+                    data-target="#addModal" 
+                    class="btn btn-primary">Add New Product
+                </button>
+
+            </div>
             
-            <div class="row mr-4 ml-4 mb-4">
+            <div class="row m-4">
 
             <?php
                 require 'configuration/db.php';
@@ -76,5 +91,80 @@
     </body>
 
     <?php include 'footer.php'; ?> 
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="addModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modelTitleId"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Add New Product</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="add-form">
+            <div class="form-group">
+              <label for="name">Product Name</label>
+              <input
+                type="text"
+                class="form-control"
+                name="name"
+                id="name"
+                aria-describedby="nameHelp"
+                placeholder="Name of the Product"
+              />
+              <div class="invalid-feedback"
+                >Name of the Product is required</div>
+            </div>
+            <div class="form-group">
+              <label for="price">Price</label>
+              <input
+                type="text"
+                class="form-control"
+                name="price"
+                id="price"
+                aria-describedby="priceHelp"
+                placeholder="Product price"
+              />
+              <div class="invalid-feedback"
+                >Price of the Product is required</div>
+            </div>
+            <div class="form-group">
+              <label for="image">Image</label>
+              <input 
+                type="file" 
+                id="image" 
+                name="image" 
+                class="form-control"
+              />
+              <div class="invalid-feedback"
+                >Image of the Product is required</div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button id="addBtn" class="btn btn-info">Add Product</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
 </html>
