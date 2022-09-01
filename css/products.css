@@ -53,6 +53,22 @@ button a{
     margin-top: 100px;
 }
 
+.search .fa{
+    padding: 5px;
+    margin: 0px;
+}
+
+.display-card{
+    display: "";
+}
+
+.hide-card{
+    display: none;
+}
+
+p{
+    color: black !important;
+}
 .footer{
 padding: 10px;
 background-color: black;

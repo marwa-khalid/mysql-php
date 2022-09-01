@@ -2,9 +2,9 @@
 
 include "../configuration/db.php"; 
 
-$ID = $_GET['ID'];
+$productId = $_GET['id'];
 
-$delete_query = "DELETE FROM Product WHERE `Product`. ID = '$ID'";
+$delete_query = "DELETE FROM Product WHERE `Product`. product_id = '$productId'";
 
 $query_run = mysqli_query($connection, $delete_query);
 

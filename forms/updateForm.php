@@ -19,7 +19,7 @@
         <nav id="navbar" class="navbar navbar-light bg-dark fixed-top">
             <a class="navbar-brand" href="../products.php">:(</a>
         </nav>
-        <form class="update-form" action="../CRUD/update.php" method="POST" name="myForm" id="form" enctype="multipart/form-data" >
+        <form class="update-form" action="../CRUD/update.php?id=<?php $productId?>" method="POST" name="myForm" id="form" enctype="multipart/form-data" >
             <div class="row">
                 <div class="col text-center mt-4">
                     <h3>Update Product</h3>
@@ -31,8 +31,8 @@
 
                 require "../configuration/db.php";
 
-                $ID = $_GET['edit'];
-                $query = "SELECT * FROM Product WHERE ID=$ID";
+                $productId = $_GET['id'];
+                $query = "SELECT * FROM Product WHERE product_id=$productId";
 
                 $queryRun = mysqli_query($connection, $query);
 
@@ -44,17 +44,17 @@
                     
                     $row = mysqli_fetch_array($queryRun);
 
-                    $productName = $row['ProductName'];
-                    $productPrice = $row['ProductPrice'];
-                    $productImage = $row['ProductImage'];
+                    $productName = $row['product_name'];
+                    $productPrice = $row['product_price'];
+                    $productImage = $row['product_image'];
 
                 }
 
                 ?>
                 <div class="col text-center m-3">
-                    <input type="text" class="form-control mb-3" name="productName" value='<?php echo $productName;?>'>
+                    <input type="text" class="form-control mb-3" name="name" value='<?php echo $productName;?>'>
                   
-                    <input type="text" class="form-control mb-3" name="productPrice" value="<?php echo $productPrice;?>">
+                    <input type="text" class="form-control mb-3" name="price" value="<?php echo $productPrice;?>">
                     
                     <input class="form-control mb-3" type="file" name="image" value="<?php echo $productImage;?>" />
 

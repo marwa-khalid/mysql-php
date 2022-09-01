@@ -25,19 +25,11 @@
             </div>
             <div class="row align-center">
                 <div class="col text-center m-3">
-                    <input type="text" class="form-control mb-3" name="product-name" placeholder="Product Name" >
-
-                    <?php if(isset($product_name_error)){ ?>
-                        <p id="product-name-error"><?php echo $product_name_error ?></p>
-                    <?php } ?>
+                    <input type="text" class="form-control mb-3" name="name" placeholder="Product Name" >
                     
-                    <input type="product-price" class="form-control mb-3" name="product-price" placeholder="Product Price">
+                    <input type="text" class="form-control mb-3" name="price" placeholder="Product Price">
 
-                    <?php if(isset($product_price_error)){ ?>
-                        <p id="product-price-error"><?php echo $product_price_error ?></p>
-                    <?php } ?>
-                    
-                    <input class="form-control mb-3" type="file" name="image" value="" />
+                    <input class="form-control mb-3" type="file" name="image"/>
 
                     <button type="submit" name="submit" class="btn btn-success btn-block mb-3">Add Product</button>
                 </div>

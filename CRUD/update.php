@@ -3,21 +3,23 @@
 include '../configuration/db.php';
 
 if (isset($_POST['update'])) {
-	$ID = $_POST['ID'];
-	$productName = $_POST['productName'];
-	$productPrice = $_POST['productPrice'];
+	$productId = $_POST['id'];
+	$productName = $_POST['name'];
+	$productPrice = $_POST['price'];
     $productImage= $_FILES["image"]["name"];
+
+
 
     $folder = "../images/" .basename($productImage);
  
-	$updated = mysqli_query($connection, "UPDATE Product SET ProductName='$productName', ProductPrice='$productPrice', 'ProductImage = '$productImage' WHERE ID=$ID");
+	$updated = mysqli_query($connection, "UPDATE Product SET product_name = '$productName', product_price = '$productPrice', product_image = '$productImage' WHERE product_id = '$productId'");
     if($updated){
         echo 'The record has been updated successfully!';
         echo '<a href="../products.php">Back to Home</a>';
         
     }
     else{
-        echo 'Record not updated'. mysqli_error($updated);
+        echo 'Record not updated'. mysqli_error($connection);
     }
 
     if (move_uploaded_file( $_FILES["image"]["tmp_name"],$folder)) {
