@@ -21,7 +21,7 @@ function searchProduct(){
             cards[i].classList.add('hide-card');
             cards[i].classList.remove('display-card');
             if(!check){
-                document.getElementById('unmatched').innerHTML = '<h2>"No matching products"</h2> ';
+                document.getElementById('unmatched').innerHTML = '<h2>No matching products</h2> ';
             }
         }
     }

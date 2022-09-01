@@ -3,7 +3,7 @@
 include '../configuration/db.php';
 
 if (isset($_POST['update'])) {
-	$productId = $_POST['id'];
+	$productId = $_GET['id'];
 	$productName = $_POST['name'];
 	$productPrice = $_POST['price'];
     $productImage= $_FILES["image"]["name"];
