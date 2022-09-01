@@ -41,18 +41,7 @@ if($result){
 else{
     echo "<br>The table was not created successfully because ". mysqli_error($db_config);
 }
-
-//Add new product in table Product
-$sql = "INSERT INTO `Product` (`ProductName`, `ProductPrice`, `ProductImage`) VALUES ('Cute Pink Top', 2000, 'images\cutetop.png')";
-$result = mysqli_query($connection, $sql);
-
-// Add a new trip to the Trip table in the database
-if($result){
-    echo "The record has been inserted successfully!<br>";
-}
-else{
-    echo "The record was not inserted because of this error ". mysqli_error($connection);
-}
 */
+
 ?>
 

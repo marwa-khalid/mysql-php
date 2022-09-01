@@ -2,6 +2,7 @@ html, body{
     margin: 0 !important;
     padding: 0 !important;
 }
+
 .navbar{
     display: block;
 }    
@@ -38,9 +39,20 @@ html, body{
     background: white !important;
 }
 
+button a{
+    color: white !important;
+}
+
+.btn-container{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
 .row{
     margin-top: 100px;
 }
+
 .footer{
 padding: 10px;
 background-color: black;
