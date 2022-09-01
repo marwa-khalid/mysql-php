@@ -8,6 +8,8 @@ $delete_query = "DELETE FROM Product WHERE `Product`. product_id = '$productId'"
 
 $query_run = mysqli_query($connection, $delete_query);
 
+unlink("../images/".$_GET["image"]);
+
 if($query_run)
 {
     header("Location: ../products.php ", TRUE, 301);

@@ -104,7 +104,7 @@
 
               <a href="forms/updateForm.php?id=<?php echo $row['product_id']; ?>"><button class="edit-btn btn-warning">Edit</button></a>
 
-              <a href="CRUD/delete.php?id=<?php echo $row['product_id']; ?>"><button class="own-btn btn-danger">Delete</button></a>
+              <a href="CRUD/delete.php?id=<?php echo $row['product_id']?>&picture=<?php echo $row['product_image']?>"><button class="own-btn btn-danger">Delete</button></a>
 
             </div>
           

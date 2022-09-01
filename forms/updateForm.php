@@ -19,7 +19,9 @@
         <nav id="navbar" class="navbar navbar-light bg-dark fixed-top">
             <a class="navbar-brand" href="../products.php">:(</a>
         </nav>
-        <form class="update-form" action="../CRUD/update.php?id=<?php $productId?>" method="POST" name="myForm" id="form" enctype="multipart/form-data" >
+        
+
+        <form class="update-form" action="../CRUD/update.php?id=<?php echo $_GET['id'];?> " method="POST" name="myForm" id="form" enctype="multipart/form-data" >
             <div class="row">
                 <div class="col text-center mt-4">
                     <h3>Update Product</h3>
@@ -32,7 +34,8 @@
                 require "../configuration/db.php";
 
                 $productId = $_GET['id'];
-                $query = "SELECT * FROM Product WHERE product_id=$productId";
+
+                $query = "SELECT * FROM Product WHERE product_id='$productId'";
 
                 $queryRun = mysqli_query($connection, $query);
 
@@ -51,6 +54,7 @@
                 }
 
                 ?>
+                
                 <div class="col text-center m-3">
                     <input type="text" class="form-control mb-3" name="name" value='<?php echo $productName;?>'>
                   
