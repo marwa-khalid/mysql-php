@@ -30,11 +30,6 @@
         echo 'The record was not inserted because '. mysqli_error($connection);
     }
 
-    
-
-        #header("Location: ", TRUE, 301);
-        #exit();
-      
 ?>
             
             
