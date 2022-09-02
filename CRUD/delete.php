@@ -4,7 +4,7 @@ include "../configuration/db.php";
 
 $productId = $_GET['id'];
 
-$delete_query = "DELETE FROM Product WHERE `Product`. product_id = '$productId'";
+$delete_query = "DELETE FROM product WHERE `product`. product_id = '$productId'";
 
 $query_run = mysqli_query($connection, $delete_query);
 

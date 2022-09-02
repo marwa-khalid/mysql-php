@@ -17,7 +17,7 @@
         <nav id="navbar" class="navbar navbar-light bg-dark fixed-top">
             <a class="navbar-brand" href="../products.php">:(</a>
         </nav>
-        <form class="add-form" action="../CRUD/insert.php" method="POST" name="myForm" id="form" enctype="multipart/form-data">
+        <form class="my-form" action="../CRUD/insert.php" method="POST" name="myForm" id="form" enctype="multipart/form-data">
             <div class="row">
                 <div class="col text-center mt-4">
                     <h3>Add Product</h3>

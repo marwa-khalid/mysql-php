@@ -21,7 +21,7 @@
         </nav>
         
 
-        <form class="update-form" action="../CRUD/update.php?id=<?php echo $_GET['id'];?> " method="POST" name="myForm" id="form" enctype="multipart/form-data" >
+        <form class="my-form" action="../CRUD/update.php?id=<?php echo $_GET['id'];?> " method="POST" name="myForm" id="form" enctype="multipart/form-data" >
             <div class="row">
                 <div class="col text-center mt-4">
                     <h3>Update Product</h3>
@@ -35,7 +35,7 @@
 
                 $productId = $_GET['id'];
 
-                $query = "SELECT * FROM Product WHERE product_id='$productId'";
+                $query = "SELECT * FROM product WHERE product_id='$productId'";
 
                 $queryRun = mysqli_query($connection, $query);
 

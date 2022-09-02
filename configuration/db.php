@@ -30,8 +30,8 @@ else{
     echo "<br>The db was not created ".mysqli_error($connection);
 }
 
-//Create a table Product in Products
-$sql = "CREATE TABLE `Product` ( `ID` INT(6) NOT NULL AUTO_INCREMENT , `ProductName` VARCHAR(30) NOT NULL , `ProductPrice` INT(6) NOT NULL , `ProductImage` VARCHAR(30), PRIMARY KEY (`ID`))";
+//Create a table product in Products
+$sql = "CREATE TABLE `product` ( `ID` INT(6) NOT NULL AUTO_INCREMENT , `product_name` VARCHAR(30) NOT NULL , `product_price` INT(6) NOT NULL , `product_image` VARCHAR(30), PRIMARY KEY (`ID`))";
 $result = mysqli_query($db_Config, $sql);
 
 // Check for the table creation success

@@ -1,7 +1,3 @@
-html, body{
-    margin: 0 !important;
-    padding: 0 !important;
-}
 
 .navbar{
     display: block;
@@ -39,7 +35,7 @@ html, body{
     background: white !important;
 }
 
-button a{
+.btn{
     color: white !important;
 }
 
@@ -66,9 +62,10 @@ button a{
     display: none;
 }
 
-p{
+#unmatched{
     color: black !important;
 }
+
 .footer{
 padding: 10px;
 background-color: black;

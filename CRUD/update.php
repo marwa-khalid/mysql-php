@@ -10,7 +10,7 @@ if (isset($_POST['update'])) {
 
     $folder = "../images/" .basename($productImage);
  
-	$updated = mysqli_query($connection, "UPDATE Product SET product_name = '$productName', product_price = '$productPrice', product_image = '$productImage' WHERE product_id = '$productId'");
+	$updated = mysqli_query($connection, "UPDATE product SET product_name = '$productName', product_price = '$productPrice', product_image = '$productImage' WHERE product_id = '$productId'");
     
     if($updated){
 

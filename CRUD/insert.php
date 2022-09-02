@@ -11,10 +11,10 @@
     $folder = "../images/" .basename($productImage);
  
     //Add new product in table Product
-        $query = "INSERT INTO Product(product_name, product_price, product_image) VALUES ('$productName', '$productPrice', '$productImage')";
+        $query = "INSERT INTO product(product_name, product_price, product_image) VALUES ('$productName', '$productPrice', '$productImage')";
         $result = mysqli_query($connection, $query);
     
-        // Add a new product to the Product table in the database
+        // Add a new product to the product table in the database
     if($result){
 
         if (move_uploaded_file( $_FILES["image"]["tmp_name"],$folder)) {

@@ -78,7 +78,7 @@
         <?php
           require 'configuration/db.php';
 
-          $query = "SELECT * FROM Product";
+          $query = "SELECT * FROM product";
           $queryRun = mysqli_query($connection, $query);
           $checkProducts = mysqli_num_rows($queryRun) > 0;
 
