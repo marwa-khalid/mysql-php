@@ -1,0 +1,21 @@
+.my-form{
+    width: 300px;
+    background-color: rgba(56, 55, 55, 0.7);
+    padding: 30px 0;
+    color: black !important;
+}
+
+.container{
+    width: 200px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-brand{
+    color: white !important;
+}
+.navbar a:hover{
+    color: goldenrod !important;
+}

@@ -1,7 +1,4 @@
-html, body{
-    margin: 0 !important;
-    padding: 0 !important;
-}
+
 .navbar{
     display: block;
 }    
@@ -38,9 +35,37 @@ html, body{
     background: white !important;
 }
 
+.btn{
+    color: white !important;
+}
+
+.btn-container{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
 .row{
     margin-top: 100px;
 }
+
+.search .fa{
+    padding: 5px;
+    margin: 0px;
+}
+
+.display-card{
+    display: "";
+}
+
+.hide-card{
+    display: none;
+}
+
+#unmatched{
+    color: black !important;
+}
+
 .footer{
 padding: 10px;
 background-color: black;
